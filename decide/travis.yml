@@ -16,5 +16,8 @@ install:
   - pip install codacy-coverage
 script:
   - cd decide
-  - coverage run --branch --source=. ./manage.py test mixnet/ --keepdb
+  - coverage run --branch --source=. ./manage.py test --keepdb
   - coverage xml
+branches:
+  only:
+    - master
